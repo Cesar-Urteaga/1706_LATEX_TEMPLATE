@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.aux",
+				"*.log",
+				"*.out",
+				"*.gz",
+				"*.pdf"
+			],
+			"folder_exclude_patterns":
+			[
+				"_RESOURCES"
+			],
+			"name": "LATEX",
+			"path": "."
+		},
+	]
+}

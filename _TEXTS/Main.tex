@@ -1,0 +1,39 @@
+%-------------------------------------------------------------------------------
+% Author        : Cesar R. Urteaga-Reyesvera
+% Creation date : June 29, 2017.
+% Description   : A sample main file that uses the sample class and package; it
+%                 uses the LATEX large project structure.
+% Resource(s)   : https://www.sharelatex.com/learn/Management_in_a_large_project
+%-------------------------------------------------------------------------------
+% We use the sample class.
+\documentclass{Summary}
+
+%---------------------------------------------------------------------- PREAMBLE
+% Calls the sample package.
+\usepackage{Formatext}
+% Package to import in an easy-way.
+\usepackage{import}
+% Sample text that pads the document out.
+\usepackage{lipsum}
+
+%---------------------------------------------------------------------- DOCUMENT
+\begin{document}
+%-------------------------------------------------------------------------- N.B.
+% The \import command establishes the directory where the TEX file is located in
+% the first pair of braces, can be relative to the current working directory or
+% absolute; the second parameter corresponds to the imported file.
+%-------------------------------------------------------------------------------
+
+% Sets up the contents of the header and footer. These commands are optional,
+% and if they are omitted, they will not be printed.
+\SetLeftHeader{Header one\\\rightmark}
+\SetRightHeader{Last updated: \today}
+\SetLeftFooter{Left footer}
+\SetCentralFooter{no-one@no-mail.com}
+
+% We import the contents of each TEX file into the document.
+\import{./}{SampleText01.tex}
+\import{./}{SampleText02.tex}
+\import{./}{SampleText03.tex}
+
+\end{document}

@@ -1,0 +1,68 @@
+%-------------------------------------------------------------------------------
+% Author        : Cesar R. Urteaga-Reyesvera
+% Creation date : June 29, 2017.
+% Description   : A personal package with commands to format text.
+% Resource(s)   : https://www.sharelatex.com/learn/Writing_your_own_package
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------- N.B.
+% A package can be structured, grosso modo, by the following parts:
+%   1. Identification
+%   2. Preliminary declarations
+%   3. Options
+%   4. More declarations
+%-------------------------------------------------------------------------------
+
+%------------------------------------------------------------- 1. IDENTIFICATION
+% Sets up the LATEX version in which the package will work.
+\NeedsTeXFormat{LaTeX2e}
+% Defines the name of the package, in this case "Formatext", and establishes
+% the release date (the format must be YYYY/MM/DD) with additional information.
+\ProvidesPackage{Formatext}[2017/06/28 Personal summary package]
+
+%-------------------------------------------------------------------------- N.B.
+% So as to define a new command, you should use the "newcommand" instruction
+% which has the following structure:
+%   \newcommand{NewCommandName}[NumberParameters][DefaultValueForFirstParameter]
+%              {DefinitionOfTheNewCommand}
+% This command supports up to 9 parameters. If your command does not have any
+% parameters, then you should not include NumberParameters and
+% DefaultValueForFirstParameter (i.e., the parameters surrounded braces). The
+% NewCommandName cannot contain any number.
+% Example:
+%   \newcommannd{exnc}[2][Chris]{Values are #1 and #2}
+%   exnc{John}        returns "Values are Chris and John"
+%   exnc[Louis]{John} returns "Values are Louis and John"
+%-------------------------------------------------------------------------------
+
+%--------------------------------------------------- 2. PRELIMINARY DECLARATIONS
+% Because we want to include commands from others packages we call them through
+% packages.
+\RequirePackage{color}
+
+% We include the new commands which will be available by the package.
+%   Color definitions:
+%     Blue
+\definecolor{Blue}{RGB}{8,64,129}
+\definecolor{Red}{RGB}{179,0,0}
+\definecolor{Green}{RGB}{35,139,69}
+%   Agree, disagree, and comment highlights.
+\newcommand{\hlA}[1]{{\color{Blue}{#1}}}
+\newcommand{\hlD}[1]{{\color{Red}{#1}}}
+\newcommand{\hlC}[1]{{\color{Green}{#1}}}
+
+%-------------------------------------------------------------------------- N.B.
+% The \DeclareOption*{} command manages the options that are not explicitly
+% defined by executing the given code when an unknown paramenter is passed.
+% On one hand, the \PackageWarning{package-name}{warning-text} will show the
+% warning text, but the compilation process will not stop.
+% On the other hand, the command \ProcessOptions\relax must be included at the
+% end of the options block in order to execute the code for each typed option.
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------- 3. OPTIONS
+\DeclareOption*{\PackageWarning{Formatext}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+%---------------------------------------------------------- 4. MORE DECLARATIONS
+% Here can be other declarations (e.g., new environments, commands, etc.).
