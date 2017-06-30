@@ -1,0 +1,14 @@
+# Author        : Cesar R. Urteaga-Reyesvera.
+# Creation date : June 29, 2017.
+
+# ---------------------------------------------------------------------  FOLDERS
+
+# ------------------------------------------------------------------------ FILES
+# Secondary LATEX files.
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Ignore the Sublime's project workspace file.
+*.sublime-workspace
