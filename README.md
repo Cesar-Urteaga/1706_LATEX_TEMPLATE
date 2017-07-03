@@ -1,6 +1,6 @@
 ##  LATEX template
 
-Sample files that illustrate the creation and use of classes, packages, and large documents in LATEX.
+Sample files that illustrate the creation and use of classes, packages, and large documents in LATEX.  Please see the example output: [https://github.com/Cesar-Urteaga/1706_LATEX_TEMPLATE/blob/master/_TEXTS/Main.pdf](https://github.com/Cesar-Urteaga/1706_LATEX_TEMPLATE/blob/master/_TEXTS/Main.pdf).
 
 ##  Organization of the files
 
