@@ -45,6 +45,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{lastpage}
 \RequirePackage{changepage}
+\RequirePackage{graphicx}
 %   This one allows you to use \sqbullet symbol.
 \RequirePackage{mathabx}
 
@@ -160,8 +161,10 @@
 \hrule width\headwidth height\footrulewidth\vskip\footruleskip}}
 
 % Sets up the symbol used in lists through the \itemize command.
-
-% We define a new environment to list items.
+%   We define a new environment to list items.
 \renewcommand\labelitemi{$\sqbullet$}
 \newenvironment{li}{\vspace*{-0.20cm}\begin{itemize}\itemsep-0.10cm}{%
 \vspace*{-0.25cm}\end{itemize}}
+
+% Create a new command to embed images.
+\newcommand{\img}[2][1]{\includegraphics[scale=#1]{#2}}
