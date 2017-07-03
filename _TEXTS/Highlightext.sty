@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 % Author        : Cesar R. Urteaga-Reyesvera
 % Creation date : June 29, 2017.
-% Description   : A personal package with commands to format text.
+% Description   : A personal package with commands to highlight text.
 % Resource(s)   : https://www.sharelatex.com/learn/Writing_your_own_package
 %-------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@
 \NeedsTeXFormat{LaTeX2e}
 % Defines the name of the package, in this case "Formatext", and establishes
 % the release date (the format must be YYYY/MM/DD) with additional information.
-\ProvidesPackage{Formatext}[2017/06/28 Personal summary package]
+\ProvidesPackage{Highlightext}[2017/06/28 Personal summary package]
 
 %-------------------------------------------------------------------------- N.B.
 % So as to define a new command, you should use the "newcommand" instruction
@@ -42,14 +42,49 @@
 
 % We include the new commands which will be available by the package.
 %   Color definitions:
-%     Blue
 \definecolor{Blue}{RGB}{8,64,129}
 \definecolor{Red}{RGB}{179,0,0}
 \definecolor{Green}{RGB}{35,139,69}
-%   Agree, disagree, and comment highlights.
-\newcommand{\hlA}[1]{{\color{Blue}{#1}}}
-\newcommand{\hlD}[1]{{\color{Red}{#1}}}
-\newcommand{\hlC}[1]{{\color{Green}{#1}}}
+%   New commands:
+%     Blue, red, and green (B, R, and G).
+\newcommand{\hB}[1]{{\color{Blue}{#1}}}
+\newcommand{\hR}[1]{{\color{Red}{#1}}}
+\newcommand{\hG}[1]{{\color{Green}{#1}}}
+%     Underline (l).
+\newcommand{\hBl}[1]{{\color{Blue}{\underline{#1}}}}
+\newcommand{\hRl}[1]{{\color{Red}{\underline{#1}}}}
+\newcommand{\hGl}[1]{{\color{Green}{\underline{#1}}}}
+%     Italicize (i).
+\newcommand{\hBi}[1]{{\color{Blue}{\emph{#1}}}}
+\newcommand{\hRi}[1]{{\color{Red}{\emph{#1}}}}
+\newcommand{\hGi}[1]{{\color{Green}{\emph{#1}}}}
+%     Make bold (b).
+\newcommand{\hBb}[1]{{\color{Blue}{\textbf{#1}}}}
+\newcommand{\hRb}[1]{{\color{Red}{\textbf{#1}}}}
+\newcommand{\hGb}[1]{{\color{Green}{\textbf{#1}}}}
+%     Underline and italicize (li).
+\newcommand{\hBli}[1]{{\color{Blue}{\underline{\emph{#1}}}}}
+\newcommand{\hRli}[1]{{\color{Red}{\underline{\emph{#1}}}}}
+\newcommand{\hGli}[1]{{\color{Green}{\underline{\emph{#1}}}}}
+%     Underline and make bold (lb).
+\newcommand{\hBlb}[1]{{\color{Blue}{\underline{\textbf{#1}}}}}
+\newcommand{\hRlb}[1]{{\color{Red}{\underline{\textbf{#1}}}}}
+\newcommand{\hGlb}[1]{{\color{Green}{\underline{\textbf{#1}}}}}
+%     Italicize and make bold (ib).
+\newcommand{\hBib}[1]{{\color{Blue}{\textbf{\emph{#1}}}}}
+\newcommand{\hRib}[1]{{\color{Red}{\textbf{\emph{#1}}}}}
+\newcommand{\hGib}[1]{{\color{Green}{\textbf{\emph{#1}}}}}
+%     Underline, italicize, and make bold (lib).
+\newcommand{\hBlib}[1]{{\color{Blue}{\textbf{\underline{\emph{#1}}}}}}
+\newcommand{\hRlib}[1]{{\color{Red}{\textbf{\underline{\emph{#1}}}}}}
+\newcommand{\hGlib}[1]{{\color{Green}{\textbf{\underline{\emph{#1}}}}}}
+%     Underline, italicize, and make bold.
+\newcommand{\hl}[1]{\underline{#1}}
+\newcommand{\hi}[1]{\emph{#1}}
+\newcommand{\hb}[1]{\textbf{#1}}
+%     Superscript and subscript (s and u, respectively).
+\newcommand{\hs}[1]{\textsuperscript{#1}}
+\newcommand{\hu}[1]{\textsubscript{#1}}
 
 %-------------------------------------------------------------------------- N.B.
 % The \DeclareOption*{} command manages the options that are not explicitly

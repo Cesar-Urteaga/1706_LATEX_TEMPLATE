@@ -6,7 +6,19 @@
 
 \section{Section 1}
 
-  The created package highlights the comments in three colors: \hlA{blue}, \hlD{red}, and \hlC{green}.  It illustrates that you can define your own commands within a package; consequently, this can be helpful when you have a lot of them, and you want to make your code clearer.
+  The created package highlights text in three colors: \hB{blue}, \hR{red}, and \hG{green}.  It illustrates that you can define your own commands within a package; consequently, this can be helpful when you have a lot of them, and you want to make your code clearer.
+
+  Also, this package was created to be used as a template to make summaries.  So, you can use the following commands:
+
+  \begin{li}
+    \item \verb=\hB=: Prints the text with blue  color: \hB{example}.
+    \item \verb=\hG=: Prints the text with green color: \hG{example}.
+    \item \verb=\hR=: Prints the text with red   color: \hR{example}.
+  \end{li}
+
+  Once you have chosen the color, you can underline it (\hl{l}), italicize it (\hi{i}), or/and make it bold (\hb{b}); remember that the order matters.  For instance, the command \verb=\hGlib= makes the text green with all the atributes mentioned earlier: \hGlib{example}.  However, if you only wanted the text in read and bold, use \verb=\hRb=: \hRb{example}.
+
+  In addition, you can (\hs{superscript}) or (\hu{subscript}) the text using \verb=\hs= and \verb=\hu=, respectively.
 
   \subsection{Subsection 1}
 
@@ -15,5 +27,5 @@
     \subsubsection{Subsubsection 1}
 
       \lipsum
-      \lipsum[1-4]
+      \lipsum[1-2]
       \pagebreak

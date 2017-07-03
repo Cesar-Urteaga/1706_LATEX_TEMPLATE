@@ -45,6 +45,8 @@
 \RequirePackage{hyperref}
 \RequirePackage{lastpage}
 \RequirePackage{changepage}
+%   This one allows you to use \sqbullet symbol.
+\RequirePackage{mathabx}
 
 % Definitions that we will use.
 %   Color definitions, from darker to lighter (i.e., 01 is the faintest color).
@@ -111,8 +113,8 @@
 % Sets up the size of the font.
 \renewcommand{\normalsize}{\fontsize{9}{10}\selectfont}
 
-% Establish the dept to which the sections are numbered; therefore, if we want
-% that no section will be numbered, we use 0.
+% Establishes the depth to which sections are numbered; therefore, if we
+% want that none section will be numbered, we must use 0.
 \setcounter{secnumdepth}{3}
 
 % We define the headers and footers of the document.
@@ -156,3 +158,10 @@
 \renewcommand{\footrulewidth}{1pt}
 \renewcommand{\footrule}{{\color{Gray01}
 \hrule width\headwidth height\footrulewidth\vskip\footruleskip}}
+
+% Sets up the symbol used in lists through the \itemize command.
+
+% We define a new environment to list items.
+\renewcommand\labelitemi{$\sqbullet$}
+\newenvironment{li}{\vspace*{-0.20cm}\begin{itemize}\itemsep-0.10cm}{%
+\vspace*{-0.25cm}\end{itemize}}
