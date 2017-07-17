@@ -46,6 +46,7 @@
 \RequirePackage{lastpage}
 \RequirePackage{changepage}
 \RequirePackage{graphicx}
+\RequirePackage{enumitem}
 %   This one allows you to use \sqbullet symbol.
 \RequirePackage{mathabx}
 
@@ -163,8 +164,18 @@
 % Sets up the symbol used in lists through the \itemize command.
 %   We define a new environment to list items.
 \renewcommand\labelitemi{$\sqbullet$}
-\newenvironment{li}{\vspace*{-0.20cm}\begin{itemize}\itemsep-0.10cm}{%
+%     Unordered list.
+\newenvironment{ul}{\vspace*{-0.20cm}\begin{itemize}\itemsep-0.10cm}{%
 \vspace*{-0.25cm}\end{itemize}}
+%     Ordered numeric list.
+\newenvironment{onl}{\begin{enumerate}[topsep=0.14cm,itemsep=-0.10cm,leftmargin=1cm,label=\arabic*.-]}{%
+\hspace*{0.20cm}\end{enumerate}}
+%     Ordered letter list.
+\newenvironment{oll}{\begin{enumerate}[topsep=0.14cm,itemsep=-0.10cm,leftmargin=1cm,label=\alph*)]}{%
+\hspace*{0.20cm}\end{enumerate}}
+%     Ordered roman list.
+\newenvironment{orl}{\begin{enumerate}[topsep=0.14cm,itemsep=-0.10cm,leftmargin=1cm,label=\roman*.]}{%
+\hspace*{0.20cm}\end{enumerate}}
 
 % Create a new command to embed images.
 \newcommand{\img}[2][1]{\includegraphics[scale=#1]{#2}}

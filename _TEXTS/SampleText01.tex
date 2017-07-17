@@ -8,17 +8,35 @@
 
   The created package highlights text in three colors: \hB{blue}, \hR{red}, and \hG{green}.  It illustrates that you can define your own commands within a package; consequently, this can be helpful when you have a lot of them, and you want to make your code clearer.
 
-  Also, this package was created to be used as a template to make summaries.  So, you can use the following commands:
+  Also, this package was created to be used as a template to make summaries.  So, you can use the following commands (use the ``ul'' environment to create an unordered list like this):
 
-  \begin{li}
+  \begin{ul}
     \item \textbackslash hB: Prints the text with blue  color: \hB{example}.
     \item \textbackslash hG: Prints the text with green color: \hG{example}.
     \item \textbackslash hR: Prints the text with red   color: \hR{example}.
-  \end{li}
+  \end{ul}
 
   Once you have chosen the color, you can underline it (\hl{l}), italicize it (\hi{i}), or/and make it bold (\hb{b}); remember that the order matters.  For instance, the command \textbackslash hGlib makes the text green with all the atributes mentioned earlier: \hGlib{example}.  However, if you only want the text in red and bold, use \textbackslash hRb: \hRb{example}.
 
-  In addition, you can \hs{superscript} or \hu{subscript} the text using \textbackslash hs and \textbackslash hu, respectively.\hf{In the class are defined new commands that allows you to create footnotes and images with the commands \textbackslash hf and \textbackslash img, respectively.  What is more, you can use the ``li'' environment to itemize using squares.}
+  In addition, you can \hs{superscript} or \hu{subscript} the text using \textbackslash hs and \textbackslash hu, respectively.\hf{In the class are defined new commands that allows you to create footnotes and images with the commands \textbackslash hf and \textbackslash img, respectively.}
+
+  Moreover, you can use the ``onl'' to create an ordered-numeric-list:
+  \begin{onl}
+    \item Item 1.
+    \item Item 2.
+  \end{onl}
+
+  In addition, you can use the ``oll'' to create an ordered-letter-list:
+  \begin{oll}
+    \item Item a.
+    \item Item b.
+  \end{oll}
+
+  So too, you can use the ``orl'' to create an ordered-roman-list:
+  \begin{orl}
+    \item Item i.
+    \item Item ii.
+  \end{orl}
 
   \subsection{Subsection 1}
 
@@ -27,5 +45,5 @@
     \subsubsection{Subsubsection 1}
 
       \lipsum
-      \lipsum[1-2]
+      \lipsum[1]
       \pagebreak
