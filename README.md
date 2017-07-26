@@ -1,6 +1,6 @@
 ##  LATEX template
 
-Sample files that illustrate the creation and use of classes, packages, and large documents in LATEX.  Please refer the [example file](./_TEXTS/Main.pdf) to see what the example class and package can do.
+Sample files that illustrate the creation and use of classes, packages, and large documents in LATEX.  Please refer to the [example file](./_TEXTS/Main.pdf) in order to see what the sample class and package can do.
 
 ##  Organization of the files
 
